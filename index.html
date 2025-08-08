@@ -37,6 +37,11 @@
             font-size: 24px;
         }
         .swiper-pagination { display: none; }
+        .swiper-slide video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -76,7 +81,7 @@
                     <!-- Image on the right -->
                     <div class="md:w-1/2 w-full">
                         <div class="p-1 rounded-lg overflow-hidden shadow-2xl bg-gray-800">
-                            <img src="your_main_image.jpg" alt="Embedded System PCB and Sensor" class="w-full h-auto object-cover rounded-md">
+                            <img src="pcb_embedded.png" alt="Embedded System PCB and Sensor" class="w-full h-auto object-cover rounded-md">
                         </div>
                     </div>
                 </div>
@@ -113,24 +118,35 @@
                     <div class="swiper-container mySwiper relative bg-gray-900/50 rounded-lg p-4">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="your_gui_image.jpg" alt="Python GUI" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
-                                <p class="text-center text-sm mt-2 text-gray-400">The Python GUI showing live temperature data.</p>
+                                <video class="rounded-lg shadow-lg w-full max-h-[32rem]" autoplay loop muted playsinline>
+                                    <source src="media1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <p class="text-center text-sm mt-2 text-gray-400">Live demonstration of the Python GUI.</p>
                             </div>
                             <div class="swiper-slide">
-                                <img src="your_pcb_schematic_image.jpg" alt="PCB Schematic" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <img src="pcb_schematic.png" alt="PCB Schematic" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
                                 <p class="text-center text-sm mt-2 text-gray-400">PCB schematic designed in EasyEDA.</p>
                             </div>
                             <div class="swiper-slide">
-                               <img src="your_pcb_layout_image.jpg" alt="PCB Layout" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
-                               <p class="text-center text-sm mt-2 text-gray-400">Top and bottom layers of the custom PCB.</p>
+                               <img src="pcb_embedded_gerberview.png" alt="PCB Gerber View" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                               <p class="text-center text-sm mt-2 text-gray-400">Gerber viewer showing top and bottom PCB layers.</p>
                             </div>
-                            <div class="swiper-slide">
-                               <img src="your_regression_graph_image.jpg" alt="Linear Regression Graph" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                             <div class="swiper-slide">
+                               <img src="linear_regression_sensor_accuracy.png" alt="Linear Regression Graph" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
                                <p class="text-center text-sm mt-2 text-gray-400">Sensor calibration and accuracy analysis.</p>
                             </div>
                             <div class="swiper-slide">
-                                <img src="your_bme280_sensor_image.jpg" alt="BME280 Sensor" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                               <img src="table_percentage_error.png" alt="Table of Percentage Error" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                               <p class="text-center text-sm mt-2 text-gray-400">Data table showing the sensor's low percentage error.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="BME280.jpg" alt="BME280 Sensor" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
                                 <p class="text-center text-sm mt-2 text-gray-400">The BME280 sensor for temperature, humidity, and pressure.</p>
+                            </div>
+                             <div class="swiper-slide">
+                                <img src="code_template_I2C_Protocol.png" alt="I2C Code Template" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">C++ code template for I²C communication protocol.</p>
                             </div>
                         </div>
                         <!-- Add Navigation -->
