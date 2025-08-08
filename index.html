@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Real-Time Data Pipeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Blue-Gray */
+            color: #E5E7EB; /* Light Gray */
+        }
+        .brand-gradient {
+            background: linear-gradient(to right, #10b981, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom Swiper Styles */
+        .swiper-button-next, .swiper-button-prev {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            transition: background-color 0.3s ease;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 24px;
+        }
+        .swiper-pagination { display: none; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gray-800/50 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <a href="https://vitorriekesviana.github.io" class="text-lg font-semibold hover:text-blue-400 transition-colors duration-300">&larr; Back to Main Portfolio</a>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="container mx-auto px-6">
+
+            <section class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Real-Time Data Pipeline</h1>
+                <p class="text-xl mt-2 brand-gradient">Embedded System for Environmental Monitoring</p>
+            </section>
+            
+            <section class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#link_to_cpp_code" target="_blank" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 text-center">
+                    View C++ Code
+                </a>
+                <a href="#link_to_python_code" target="_blank" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 text-center">
+                    View Python Code
+                </a>
+            </section>
+
+            <section class="max-w-6xl mx-auto mt-16">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <!-- Overview on the left -->
+                    <div class="md:w-1/2 w-full">
+                        <h2 class="text-3xl font-bold mb-4">Project Overview</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            This project demonstrates a complete, end-to-end data pipeline, from hardware to a graphical user interface. I programmed an ATmega328P microcontroller in C++ to acquire temperature, humidity, and pressure data from a BME280 sensor via the I²C protocol. The data is then transmitted to a computer, where a Python script applies calibration parameters and displays the information in a real-time monitoring GUI.
+                        </p>
+                    </div>
+                    <!-- Image on the right -->
+                    <div class="md:w-1/2 w-full">
+                        <div class="p-1 rounded-lg overflow-hidden shadow-2xl bg-gray-800">
+                            <img src="your_main_image.jpg" alt="Embedded System PCB and Sensor" class="w-full h-auto object-cover rounded-md">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-5xl mx-auto">
+                 <div class="mt-16">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Data Pipeline Stages</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <!-- Stage 1 -->
+                        <div class="bg-gray-800/50 p-6 rounded-lg">
+                             <div class="flex-shrink-0 text-blue-400 w-12 h-12 mx-auto flex items-center justify-center bg-gray-900 rounded-full text-2xl font-bold mb-4">1</div>
+                            <h3 class="text-xl font-bold">Data Acquisition</h3>
+                            <p class="text-gray-400 mt-1">A microcontroller (C++) reads data from the BME280 sensor over I²C.</p>
+                        </div>
+                        <!-- Stage 2 -->
+                        <div class="bg-gray-800/50 p-6 rounded-lg">
+                             <div class="flex-shrink-0 text-blue-400 w-12 h-12 mx-auto flex items-center justify-center bg-gray-900 rounded-full text-2xl font-bold mb-4">2</div>
+                            <h3 class="text-xl font-bold">Data Transformation</h3>
+                            <p class="text-gray-400 mt-1">A Python script receives the raw data and applies calibration formulas.</p>
+                        </div>
+                        <!-- Stage 3 -->
+                        <div class="bg-gray-800/50 p-6 rounded-lg">
+                            <div class="flex-shrink-0 text-blue-400 w-12 h-12 mx-auto flex items-center justify-center bg-gray-900 rounded-full text-2xl font-bold mb-4">3</div>
+                            <h3 class="text-xl font-bold">Real-Time Visualization</h3>
+                            <p class="text-gray-400 mt-1">The processed data is displayed live on a custom-built Python GUI.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Project Gallery</h2>
+                    <!-- Swiper Carousel -->
+                    <div class="swiper-container mySwiper relative bg-gray-900/50 rounded-lg p-4">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="your_gui_image.jpg" alt="Python GUI" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">The Python GUI showing live temperature data.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="your_pcb_schematic_image.jpg" alt="PCB Schematic" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">PCB schematic designed in EasyEDA.</p>
+                            </div>
+                            <div class="swiper-slide">
+                               <img src="your_pcb_layout_image.jpg" alt="PCB Layout" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                               <p class="text-center text-sm mt-2 text-gray-400">Top and bottom layers of the custom PCB.</p>
+                            </div>
+                            <div class="swiper-slide">
+                               <img src="your_regression_graph_image.jpg" alt="Linear Regression Graph" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                               <p class="text-center text-sm mt-2 text-gray-400">Sensor calibration and accuracy analysis.</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="your_bme280_sensor_image.jpg" alt="BME280 Sensor" class="rounded-lg shadow-lg w-full max-h-[32rem] object-contain">
+                                <p class="text-center text-sm mt-2 text-gray-400">The BME280 sensor for temperature, humidity, and pressure.</p>
+                            </div>
+                        </div>
+                        <!-- Add Navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <h2 class="text-3xl font-bold mb-4 text-center">Technologies Used</h2>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <span class="bg-purple-900/50 text-purple-300 text-sm font-semibold px-3 py-1 rounded-full">C++</span>
+                        <span class="bg-yellow-900/50 text-yellow-300 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-teal-900/50 text-teal-300 text-sm font-semibold px-3 py-1 rounded-full">Microcontrollers (ATmega328P)</span>
+                        <span class="bg-red-900/50 text-red-300 text-sm font-semibold px-3 py-1 rounded-full">I²C Protocol</span>
+                        <span class="bg-blue-900/50 text-blue-300 text-sm font-semibold px-3 py-1 rounded-full">GUI Development</span>
+                        <span class="bg-green-900/50 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">PCB Design (EasyEDA)</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="py-6 mt-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Vitor Riekes Viana. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Swiper.js JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+</body>
+</html>
